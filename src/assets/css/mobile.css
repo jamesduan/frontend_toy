@@ -1,0 +1,267 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: none;
+  /*-webkit-user-select: none;
+  user-select: none;*/
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Arial, 'Microsoft YaHei';
+}
+html {
+  width: 100%;
+}
+ol, ul,li {
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6{ font-weight: normal;}
+body {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+   color: #333;
+  background-color: #efeff4;
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*text-align: center;*/
+  color: #2c3e50;
+}
+body, html, #app { /*height: 100%;主要有利于子元素height：100%；等价于vh，但是相对于body*/}
+.pagebox {
+  padding-top: 44px;
+  padding-bottom: 60px;
+  /*height: 100vh;
+  height: 100%;
+  overflow-y: scroll;*/
+}
+a {
+  color: #14C9B3;
+}
+
+.clearfix:after{
+  visibility: hidden;
+  display: block;
+  font-size: 0; 
+  content: '';
+  clear: both;
+  height: 0;
+}
+.color1 {
+  color: #14C9B3;
+}
+
+.color2 {
+  color: #ff9900;
+}
+
+p {
+  font-size: 14px;
+}
+.border{
+ background-image:linear-gradient(180deg, #d9d9d9, #d9d9d9 51%, transparent 50%);
+  background-size:100% 1px;
+  background-repeat:no-repeat;
+  background-position:top left;
+  background-origin:border-box;  
+}
+.border-content{background-origin:content-box;}
+.border-bottom{background-position:bottom left; }
+/*ios*/
+.ui-ios {
+  padding-top: 20px;
+}
+
+.ui-ios .mint-header {
+  padding-top: 20px;
+  height: 64px;
+}
+.ui-ios .mint-navbar.is-fixed{ top:60px;}
+/*android*/
+.ui-android .mint-navbar.is-fixed{ top:40px;}
+.mint-navbar.is-fixed{ top:40px;}
+
+/*
+@media(min-width:320px){
+html{ font-size:100px;}	
+}
+@media(min-width:360px){
+html{ font-size:112.5px;}	
+}
+@media(min-width:400px){
+html{ font-size:125px;}	 
+}
+*/
+@media only screen and(min-width: 600px) {
+  /*平板*/
+}
+
+@media only screen and(min-width: 760px) {
+  /*电脑*/
+}
+
+@media only screen and (orientation: landscape) {
+  /*横屏*/
+  body {
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  /*竖屏*/
+  body {
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/*
+div{font-size:12px;}
+[data-dpr="2"] div{ font-size:24px;}
+[data-dpr="3"] div{ font-size:36px;}
+*/
+/*网格*/
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+/*弹窗*/
+.mint-actionsheet-listitem,.mint-actionsheet-button{ font-size: 16px; color:#14C9B3;}
+/*button*/
+.button{background-color:transparent; box-shadow:none;padding: 0px;}
+.mint-button--primary {background-color:#14C9B3}
+.mint-button--primary.is-plain {border:1px solid #14C9B3;color:#14C9B3;}
+/*头尾样式重构*/
+.mint-header {font-size:16px; background-color:#00D9BE; height:44px;}
+.mint-tab-item {color:#929292;}
+.mint-tabbar > .mint-tab-item.is-selected {
+  color: #00D9BE;
+  background-color: transparent;
+}
+
+.mint-cell-wrapper {
+  background-image: -webkit-linear-gradient(top, #d9d9d9, #d9d9d9 51%, transparent 0);
+  background-image: linear-gradient(180deg, #d9d9d9, #d9d9d9 51%, transparent 0);
+}
+.mint-cell-wrapper .mint-cell-value span{line-height: 30px;}
+.mint-tabbar {
+  background-image: -webkit-linear-gradient(top, #d9d9d9, #d9d9d9 51%, transparent 50%);
+  background-image: linear-gradient(180deg, #d9d9d9, #d9d9d9 51%, transparent 50%);
+}
+.mint-cell {
+  min-height: 44px;
+}
+.mint-cell .mint-cell-value span{ line-height: 20px;}
+.mint-cell:last-child{
+  background-image: -webkit-linear-gradient(bottom, #d9d9d9, #d9d9d9 51%, transparent 51%);
+  background-image: linear-gradient(0deg, #d9d9d9, #d9d9d9 51%, transparent 51%);
+}
+/*路由*/
+.mint-tab-item-label a{ color:#929292; text-decoration: none; }
+.router-link-active{ color:#14C9B3; text-decoration: none;}
+
+/*登录页*/
+::-webkit-input-placeholder {color:#999;}
+.login img {
+  margin: 30px 0px 20px;
+}
+.login .mint-cell-wrapper {
+  background: #fff;
+  font-size: 16px;
+  background-image: none;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+
+.login .mint-field-core {
+  font-size: 16px;
+}
+
+.login .mint-cell {
+  min-height: 40px;
+}
+
+.login .erro {
+  font-size: 12px;
+  color: #FF9700;
+  margin-top: 10px;
+}
+
+.login .mint-field-state {
+  margin-left: 0px;
+  margin-right: 5px;
+  color: #FF9700;
+}
+
+.login .mint-field-state .mintui {
+  font-size: 14px;
+}
+
+.login .register {
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+/*search*/
+.mint-searchbar-core{ width:100%;}
+.mint-searchbar-placeholder .mintui-search { font-size:14px; margin-right:2px;}
+.mint-searchbar{ z-index:0;}
