@@ -35,8 +35,8 @@ new Vue({
 //         path: '/login',
 //         query: {redirect: to.fullPath}
 //       })
-//     } else {
-//       next()
+//     } else {//
+//        next()
 //     }
 //   } else {
 //     next()
